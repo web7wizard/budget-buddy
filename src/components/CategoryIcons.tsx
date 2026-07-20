@@ -1,0 +1,131 @@
+import React from 'react';
+import {
+  Briefcase,
+  Laptop,
+  TrendingUp,
+  Gift,
+  Percent,
+  RotateCcw,
+  GraduationCap,
+  DollarSign,
+  Utensils,
+  ShoppingBag,
+  Cookie,
+  Soup,
+  Coffee,
+  Car,
+  Fuel,
+  ShoppingCart,
+  Shirt,
+  Smartphone,
+  FileText,
+  Lightbulb,
+  Droplet,
+  Wifi,
+  Home,
+  BookOpen,
+  School,
+  Activity,
+  Pill,
+  Shield,
+  Clapperboard,
+  Film,
+  Play,
+  Gamepad2,
+  Plane,
+  Users,
+  Smile,
+  LineChart,
+  PiggyBank,
+  Heart,
+  HelpCircle,
+  LucideIcon
+} from 'lucide-react';
+
+export const categoryIcons: Record<string, LucideIcon> = {
+  // Income
+  Salary: Briefcase,
+  Freelance: Laptop,
+  Business: TrendingUp,
+  Gift: Gift,
+  Interest: Percent,
+  Refund: RotateCcw,
+  Scholarship: GraduationCap,
+  Other: DollarSign,
+
+  // Expenses
+  Food: Utensils,
+  Groceries: ShoppingBag,
+  Snacks: Cookie,
+  Restaurant: Soup,
+  'Tea/Coffee': Coffee,
+  Transport: Car,
+  Fuel: Fuel,
+  Shopping: ShoppingCart,
+  Clothes: Shirt,
+  Electronics: Smartphone,
+  Bills: FileText,
+  Electricity: Lightbulb,
+  Water: Droplet,
+  Internet: Wifi,
+  'Mobile Recharge': Smartphone,
+  Rent: Home,
+  Education: GraduationCap,
+  Books: BookOpen,
+  College: School,
+  Medical: Activity,
+  Medicine: Pill,
+  Hospital: Shield,
+  Entertainment: Clapperboard,
+  Movies: Film,
+  Netflix: Play,
+  Gaming: Gamepad2,
+  Travel: Plane,
+  Family: Users,
+  Friends: Smile,
+  Investment: LineChart,
+  Savings: PiggyBank,
+  Charity: Heart,
+  Others: HelpCircle,
+};
+
+export const getCategoryIcon = (category: string): LucideIcon => {
+  return categoryIcons[category] || HelpCircle;
+};
+
+export const getCategoryColor = (category: string, type: 'income' | 'expense'): string => {
+  if (type === 'income') {
+    return 'bg-emerald-500/10 text-emerald-500 border border-emerald-500/20';
+  }
+  
+  const colors: Record<string, string> = {
+    Food: 'bg-orange-500/10 text-orange-400 border border-orange-500/20',
+    Groceries: 'bg-yellow-500/10 text-yellow-400 border border-yellow-500/20',
+    Snacks: 'bg-amber-600/10 text-amber-400 border border-amber-600/20',
+    Restaurant: 'bg-amber-500/10 text-amber-500 border border-amber-500/20',
+    'Tea/Coffee': 'bg-orange-400/10 text-orange-300 border border-orange-400/20',
+    Transport: 'bg-sky-500/10 text-sky-400 border border-sky-500/20',
+    Fuel: 'bg-red-500/10 text-red-400 border border-red-500/20',
+    Shopping: 'bg-pink-500/10 text-pink-400 border border-pink-500/20',
+    Clothes: 'bg-rose-500/10 text-rose-400 border border-rose-500/20',
+    Electronics: 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/20',
+    Bills: 'bg-purple-500/10 text-purple-400 border border-purple-500/20',
+    Electricity: 'bg-yellow-400/10 text-yellow-300 border border-yellow-400/20',
+    Water: 'bg-blue-400/10 text-blue-300 border border-blue-400/20',
+    Internet: 'bg-teal-500/10 text-teal-400 border border-teal-500/20',
+    Rent: 'bg-blue-500/10 text-blue-400 border border-blue-500/20',
+    Education: 'bg-emerald-600/10 text-emerald-400 border border-emerald-600/20',
+    Books: 'bg-green-500/10 text-green-400 border border-green-500/20',
+    Medical: 'bg-red-600/10 text-red-500 border border-red-600/20',
+    Medicine: 'bg-rose-600/10 text-rose-500 border border-rose-600/20',
+    Entertainment: 'bg-violet-500/10 text-violet-400 border border-violet-500/20',
+    Movies: 'bg-purple-600/10 text-purple-400 border border-purple-600/20',
+    Netflix: 'bg-red-600/10 text-red-500 border border-red-600/20',
+    Gaming: 'bg-fuchsia-500/10 text-fuchsia-400 border border-fuchsia-500/20',
+    Travel: 'bg-cyan-500/10 text-cyan-400 border border-cyan-500/20',
+    Investment: 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20',
+    Savings: 'bg-teal-500/10 text-teal-400 border border-teal-500/20',
+  };
+
+  return colors[category] || 'bg-slate-500/10 text-slate-400 border border-slate-500/20';
+};

@@ -1,0 +1,6 @@
+{
+  "name": "BudgetBuddy",
+  "description": "Track every rupee. Build smarter financial habits. Premium Personal Finance Web App.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
